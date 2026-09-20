@@ -1,0 +1,66 @@
+Day : 2 =  Advanced linux commanfs
+
+ls
+ls -a = hiden folder
+ls -l
+pwd
+touch
+mkdir 
+cd  = chnage directory
+rm file.txt
+rm -r devops = recursvily
+rmdir devops/
+echo "Hello" > demo.txt = redirect to demo.txt
+zcat = print the zip file
+Head = top 10 line print
+head -n 5 nohup.out
+tail = last 10 line print
+tail -f myfiler.txt = it will wait and monitor if new thing going to add it will print live e.g "log"
+less = make it pages
+more = make more into the pages
+
+cp source.txt destination/
+mv source.txt desination/
+cp -r cloud/ devops/
+mv source.txt soruce2.txt = chnage the name as well
+wc myfile.txt = word count 
+
+soft link and hard link = in soft link if main program deleted then sortcut is also deleted while in hard link if main file delete your shortcut stay as it's
+
+ln = link "full fomr"
+
+softlink = ln -s /home/ubantu/linux_for_devops/cloud/devops-file.txt softlink-file = created soft link 
+=> if we change anything in main file then in link file also it will reflect
+
+hardlink = ln /home/ubantu/linux_for_devops/cloud/devops-file.txt hardlink-file 
+
+
+
+cut -b 1-4 myfile.txt = give me the 4 byte from myfile.txt 
+
+tee = print + write into the file = echo "hhello" | tee hello.txt
+
+sort hello.txt
+
+clear
+
+diff demofile.txt hardlink.txt = show the difference between these two files
+
+
+
+ssh = key -> public and private = public key should be at server and private key is in your pc when you are doing key-pair that time public goes to server and private get download at your system 
+
+df = disk usage 
+
+df -h = high level showing of disk usgae
+du . 
+
+ps = process
+fuser .
+kill
+free -h = disk space 
+nohup = used to store the logs = benefit once you run df and free -h both log will be saved here 
+
+vmstat = virtual memory info 
+vmstat -a 
+

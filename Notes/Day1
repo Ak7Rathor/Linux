@@ -1,0 +1,22 @@
+Day : 1 = Linux basic commands
+
+
+how does the internet work
+what is the server
+differnece between the web server and the application server = static and dynamic website
+type of application = standalone , web application
+standlone apps = no internet , cache , server needed for this type of application 
+web application = intagram, youtube 
+what is application support
+what is application maintenance
+
+Top = cpu 
+df -h = disk usgae
+free = ram usgae
+
+what are kernal,bootloader,shell
+linux system architecutre
+linux file system
+linux vs unix
+state of process = running,sleeping ,terminted, zombie,stopped
+

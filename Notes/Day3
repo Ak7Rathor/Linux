@@ -1,0 +1,94 @@
+Day : 3 
+
+uname = Linux,darbin
+uptime 
+date
+who = list how many user has been logged in and what time
+whoami = current logged-in user name
+
+which bash = gives you the location where it's install 
+id
+sudo 
+
+sudo shutdown
+sudo reboot 
+
+sudo apt-get update
+apt = sudo apt install docker.io = linux is finding docker inside thier system to install
+	sudo apt-get install docker.io = getting from the internet
+
+
+ctrl+r = reverse search 
+
+sudo apt remove docker.io
+
+Different type application packager manger
+1.apt
+2.yum = centos
+3.dnf = fedora
+4.pacman = arch
+5.portage = Gentoo linux
+6.rpm = redhat
+
+
+---User & Group management commands---
+
+su = switch user "su jethalal"
+sudo useradd -m jethalal
+sudo passwd jethalal
+sudo userdel jethalal
+
+
+----creating a group ----
+sudo useradd jethalal
+sudo useradd babita
+
+sudo groupadd devops
+cat /etc/group = show all groups
+
+sudo gpasswd -a jethalal devops
+sudo gpasswd -M iyer,tappu,bhide = add multiple user at the same time
+sudo groupdel tester
+
+drwxrwxr-x 
+d=directory
+rwx=user
+rwx=group 
+r-x=other 
+
+0 = ---
+1 = --x
+2 = -w-
+3 = -wx
+4 = r--
+5 = r-x
+6 = rw-
+7 = rwx
+
+chmod 777 cloud
+
+umask = By default it's 0002 means all,all,read permission for new file
+
+sudo chown jethalal demofile.txt = change the ownership of the file
+sudo chgrp devops demofile.txt = change the group ownership of the file 
+
+
+
+
+-- compression commands---
+
+zip -r ldf.zip folder_name
+unzip ldf.zip
+
+tar -cvzf cloud.tar.gz cloud = c=compress,v=display,z=end with gz, f=files
+tar -xczf cloud.tar.gz = x=extract
+
+
+# If you want to copy file from local machine to server ec2 
+
+scp -i "/Users/ayush/Downloads/linux-for-devops-key.pem" secret_file.txt ubuntu@ec2-3-344-33.us.compute.amazonaws.com:/home/ubuntu = copy from local to ec2
+
+
+scp -i "/Users/ayush/Downloads/linux-for-devops-key.pem" -r ubuntu@ec2-3-344-33.us.compute.amazonaws.com:/home/ubuntu/linux_for_devops .  = copy from ec2 to local
+
+rsync -e "ssh -i /Users/ayush/Downloads/linux-for-devops-key.pem" -avz linux_for_devops ubantu@ubuntu@ec2-3-344-33.us.compute.amazonaws.com:/home/ubuntu/linux_for_devops = sync local folder and ec2 folder
