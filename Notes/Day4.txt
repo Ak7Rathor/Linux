@@ -1,0 +1,24 @@
+ping =  check the connection by sending and receive some package 
+netstat = show all active connection with some details
+ifconfig  = show all network interfaces = "lo" interface is internal localhost server 12.0.0.1
+traceroute = track all route = traceroute youtube.com
+tracepath = same but path 
+mtr = ping and path both are going to show  (my trace route)
+nslookup
+Telnet
+hostname 
+ip address show
+iwconfig = show all wireless attachment 
+ss
+dig trainwithsubham.com =  getting more details
+whois  = from where you have purchase domain 
+arp = to find mac address
+ifplugstatus = show all interfaces 
+
+curl = curl is command tool used to send HTTP request, download files,test API's with web servers
+wget = to download some file form internet
+
+watch = every two second it will run = watch top
+nmap = when you need to scan some website about their ports
+route
+

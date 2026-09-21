@@ -1,0 +1,50 @@
+Introduction to Linux volumes and aws EBS
+physical vs logical volumes vs volume groups in Linux
+Mounting volumnes in Linux
+Managing AWS EBS on EC2 instances
+introduction to LVM (logical volume Manager)
+using LVM with EBS for Dyanamic Storage Mangement(Notes)
+
+lsblk = list the blocks
+df -h
+
+10gb+5gb+8gb = combine all volume to make "volume Group" = now to make the partition then it called "logicalVolume"(c,d,f drive)
+
+These are for using 2 volume
+
+lvm
+pvcreate /dev/xvdef /dev/xvdg /dev/xvdh = for creating physical volume
+
+pvs  = show all volume
+
+vgcreate tws_vg /dev/xvdf /dev/xvdg = to create volume group 
+
+vgs = show all volume groups
+
+lvcreate -L 10G -n tws_lv tws_vg = create logical volume using volume groups
+
+
+lvs
+Mount= to make volume usable 
+unmount
+
+mkdir /mnt/tws_lv_mount
+mkfs.ext4 /dev/tws_vg/tws_lv = format
+
+mount /dev/tws_vg/tws_lv /mnt/tws_lv_mount
+
+
+Now we are using only 1 volume and how to mount
+
+mkdir /mnt/tws_disk_mount
+mkfs -t ext4 /dev/xvdh
+
+mount /dev/xvdh /mnt/tws_disk_mount/
+
+
+
+# Extend the volumne
+
+lvextend -L +5G /dev/tws_vg/tws_lv = increase 5gb
+
+

@@ -1,0 +1,13 @@
+awk = condition the data must be in csv format or tap format
+
+awk '/INFO/ {print $1,$2}' app.log
+
+awk '/INFO/ {count++} END {print count}' app.log
+
+awk '$2 >= "08:53:00" && $2 <= "08:54:00" {print $1}' app.log
+
+
+sed 's/INFO/LOG/g' app.log
+
+
+
